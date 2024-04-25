@@ -1,7 +1,29 @@
-<section class="center">
-    <form id="form">
-      <input type="text"  value="Filter city" placeholder="Filter by city" id="filter" />
-      <button class="primary" type="button">Search</button>
+
+  <h1 style="text-align: center;"> Let's Explore The World </h1> <br>
+  <section class="center">
+    <!-- <form class="form-container" #myForm="ngform" (ngSubmit)="onSubmit()">  -->
+      <form class="form-container">
+        <!-- <input type="text" name="country" [(ngModel="countries")] placeholder="Filter by country" /> -->
+      COUNTRY <input type="text" name="country" placeholder="Filter by country" id="country" autocomplete="country-name" #country/> <br><br>
+      CITY <input type="text" name="City" placeholder="Filter by city" id="city" #city/> 
+      <!-- <select>
+        <option value="" *NgFor="let data for data"></option>
+      </select> -->
+      <button class="primary" type="submit" (click)="onSearch(country,city)">Search</button><br>
+
+      
     </form>
-    
+    <br>
+
+    <div>
+      <p> Population :  {{population}}</p>
+      <p> Currency :  {{currency}}</p>
+      <p> Capital :  {{capital}}</p>
+      <p> Location : </p>
+      <ul>
+        <li> Latitude : {{lat}}</li>
+        <li> Longitude : {{long}}</li>
+      </ul>
+    </div>
+
   </section>
